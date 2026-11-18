@@ -173,6 +173,10 @@ When an agent makes a mistake, own the mistake, contain its impact, understand w
 
 Google's postmortem practice supports investigating contributing conditions and following through on improvements. The practical implication for agentic work is to examine the instructions, context, tools, checks, and decisions that allowed the mistake, then change the process and verify the correction. [Google SRE, 2016][postmortems]
 
+### Put these responsibilities into practice
+
+The [practical companion](docs/practical-companion.md) shows how to carry intent into project instructions, work items, implementation, UX review and delivery evidence. It includes a Grid worked example, a way to evaluate whether agents apply the guidance, and [adaptable project templates](templates/README.md).
+
 ## 7. Architecture should be observed in the world it serves
 
 Good architecture expresses the domain and the design intent, respects constraints and resource budgets, and makes the software easy to change. Complexity should earn its place by enabling customer value.
