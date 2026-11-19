@@ -1,6 +1,30 @@
-# Great Software in the Age of AI
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+    <img src="assets/banner-light.svg" alt="Great Software in the Age of AI" width="100%">
+  </picture>
+</p>
 
-*Taste, intent, domain understanding, and the discipline of creating net value*
+<p align="center">
+  <em>Taste, intent, domain understanding, and the discipline of creating net value</em>
+</p>
+
+<p align="center">
+  <sub>~25 min read · 10 sections · 31 sources</sub>
+</p>
+
+<p align="center">
+  <a href="#the-argument-at-a-glance"><strong>The argument at a glance</strong></a>
+  &nbsp;·&nbsp;
+  <a href="docs/practical-companion.md"><strong>Practical companion</strong></a>
+  &nbsp;·&nbsp;
+  <a href="templates/README.md"><strong>Project templates</strong></a>
+  &nbsp;·&nbsp;
+  <a href="#references-and-evidence-notes"><strong>Evidence</strong></a>
+</p>
+
+<br>
 
 ## Abstract
 
@@ -11,6 +35,21 @@ AI changes the economics of implementation. It makes it increasingly practical t
 This paper argues for people who understand the work, care about the whole solution, and take responsibility for realizing its intended value. They bring taste, intent, judgment, and humility to that responsibility, whether working individually or as a team. Engineering work can be delegated within explicit constraints and resource budgets, with validation grounded in the whole user ecosystem. Increasingly rich simulations of that ecosystem offer an environment for developing and evaluating software. The simulation gives the artifact its form. The artifact must then work in the customer's actual environment.
 
 Research supports many elements of this position. It also leaves important questions open about how design authority should be organized, the sufficiency of simulated users, and the relationship between development speed and realized value. Those boundaries are part of the argument.
+
+## The argument at a glance
+
+| | Section | In one line |
+| :-: | --- | --- |
+| 1 | [Greatness begins in the customer's actual work](#1-greatness-begins-in-the-customers-actual-work) | Great software makes the work better across the whole user ecosystem, for less than it costs to adopt, use, operate and evolve. |
+| 2 | [People must carry the dream](#2-people-must-carry-the-dream) | Design carries responsibility for the intent of the whole; how authority is organized is itself a design choice that answers to value. |
+| 3 | [Become sufficiently part of the customer's world](#3-become-sufficiently-part-of-the-customers-world) | Earn domain understanding by observing actual work, and keep user *input* distinct from user *feedback*. |
+| 4 | [UX spends the customer's resources](#4-ux-spends-the-customers-resources) | Set resource budgets; reliability, security, accessibility and performance belong inside the definition of complete. |
+| 5 | [If development is so much faster, where is the software?](#5-if-development-is-so-much-faster-where-is-the-software) | More code is not more complete solutions; faster engineering matters when it helps value land. |
+| 6 | [People and agentic resources](#6-people-and-agentic-resources) | People keep intent, taste and accountability; agents work within agreed constraints and budgets, producing evidence at each stage. |
+| 7 | [Architecture should be observed in the world it serves](#7-architecture-should-be-observed-in-the-world-it-serves) | Simulate enough of the customer's world to give the solution its form, then make it stand in the real one. |
+| 8 | [Whither goest technical debt?](#8-whither-goest-technical-debt) | If complete replacement becomes cheap, the durable assets are understanding, intent and trustworthy evaluation. |
+| 9 | [Release at the pace the customer can land](#9-release-at-the-pace-the-customer-can-land) | Be able to release on demand; time customer-facing change to what customers can absorb. |
+| 10 | [Let actual value decide what happens next](#10-let-actual-value-decide-what-happens-next) | Judge by outcomes across the ecosystem, then improve, change direction, or stop. |
 
 ## 1. Greatness begins in the customer's actual work
 
@@ -38,7 +77,12 @@ Design carries responsibility for the intent of the whole solution. This respons
 
 Shared understanding gives people and agents a basis for making decisions. It becomes consequential when people use it to develop intent, exercise judgment, and make commitments. A team can discover a possibility that none of its members initially conceived, challenge one another's assumptions, and give that possibility a coherent form. Decisions still need to be made and owned. User input informs those choices; it is not a vote on the solution.
 
-> The designer's voice is an echo from the future. What is created is a shadow of what eventually worked.
+<br>
+<p align="center">
+  <em>“The designer's voice is an echo from the future.<br>
+  What is created is a shadow of what eventually worked.”</em>
+</p>
+<br>
 
 That is an account of the imaginative work of design. People see a possible future in which the customer's work is better and develop that possibility into a coherent solution. The vision may originate with one person or emerge through collaboration. Taste is the judgment involved in deciding what belongs, what is unnecessary, and how the whole should feel and function.
 
@@ -113,7 +157,10 @@ That raises a reasonable question: if we obtain a tenfold improvement in develop
 
 The question exposes what we are counting. Ten times more code, test cases, or deployments is a different observation from ten times more complete solutions. The result we care about is more customer value realized within the available resources.
 
-Current evidence supports gains in particular activities, with considerable variation. Three randomized field experiments involving 4,867 developers found a pooled increase of about 26% in completed tasks with access to a coding assistant; the individual experimental estimates were noisy. These experiments studied code-completion assistance and task outcomes. They do not establish a tenfold improvement across the entire lifecycle, nor do they impose a ceiling on subsequent agents. [Cui and colleagues, 2025][cui]
+Current evidence supports gains in particular activities, with considerable variation. Three randomized field experiments involving 4,867 developers found a pooled increase of about 26% in completed tasks with access to a coding assistant; the individual experimental estimates were noisy. [Cui and colleagues, 2025][cui]
+
+> [!NOTE]
+> **Evidence boundary.** These experiments studied code-completion assistance and task outcomes. They do not establish a tenfold improvement across the entire lifecycle, nor do they impose a ceiling on subsequent agents.
 
 DORA's later analysis describes higher AI adoption as associated with both greater delivery throughput and greater instability. Its qualitative work also reports time moving from creation into auditing and verification. These findings challenge a simple conversion from faster generation to proportionately more finished, valuable software; they do not establish that AI cannot improve the complete process. [DORA, 2026][dora-ai]
 
@@ -130,6 +177,14 @@ People retain intent, taste, and accountability. They decide what is worth build
 Conway's law remains a useful prompt. If the structure of communication influences the structure of the system, then an agentic workflow needs communication and context appropriate to the desired solution. Conway's original argument concerned organizations; extending it to agents is a design inference. It is not evidence that naming agents after human departments will produce the right architecture. [Conway, 1968][conway]
 
 The responsibilities we used to articulate as roles can also appear as stages along feature development. Domain analysis, architecture, implementation, testing, review, performance work, deployment, and observation are concerns the workflow must cover. They need not each imply a permanent person or agent.
+
+```mermaid
+flowchart LR
+    U["Understand<br>the work"] --> I["Establish<br>intent"] --> E["Explore<br>and design"] --> B["Build"] --> V["Verify<br>and review"] --> R["Release<br>and observe"]
+    V -. "findings" .-> B
+    B -. "uncertainty" .-> E
+    R -. "corrections to the model" .-> U
+```
 
 | Stage | Responsibility | Evidence carried forward |
 | --- | --- | --- |
@@ -160,7 +215,10 @@ Code review should check that the implementation expresses design intent, respec
 
 Research on human review found that understanding the code and its changes was central, and that review contributed knowledge transfer and alternative solutions as well as defect discovery. An agent performing this stage needs the context that makes those judgments meaningful. [Bacchelli and Bird, 2013][code-review]
 
-The reviewer also needs to earn trust. A 2026 benchmark study found that models sometimes rejected correct implementations by misreading specifications or adding unstated requirements; more elaborate requests for criticism could increase those errors. The study used short programming tasks and specific models, so its results are a warning about demonstrated failure modes, not a universal limit on agentic review. [Jin and Chen, 2026][review-conformance]
+The reviewer also needs to earn trust. A 2026 benchmark study found that models sometimes rejected correct implementations by misreading specifications or adding unstated requirements; more elaborate requests for criticism could increase those errors. [Jin and Chen, 2026][review-conformance]
+
+> [!NOTE]
+> **Evidence boundary.** The study used short programming tasks and specific models, so its results are a warning about demonstrated failure modes, not a universal limit on agentic review.
 
 A useful finding identifies the intent, constraint, budget, or plausible future change affected; supplies evidence connecting the implementation to the concern; and proposes a correction whose benefit justifies its cost. The reviewer should distinguish a demonstrated defect from a reasoned concern or an uncertainty needing investigation.
 
@@ -190,7 +248,10 @@ Architecture evaluation has never depended on executable tests alone. The Archit
 
 ### The ambition and its research boundary
 
-AI makes increasingly rich world models worth pursuing. The ambition is comprehensive observation of the solution in its domain. The proposition that we can faithfully simulate the entirety of an arbitrary customer's world remains a research direction, not an established capability.
+AI makes increasingly rich world models worth pursuing. The ambition is comprehensive observation of the solution in its domain.
+
+> [!IMPORTANT]
+> **Open proposition.** The proposition that we can faithfully simulate the entirety of an arbitrary customer's world remains a research direction, not an established capability.
 
 There is strong industrial precedent for bounded simulation. FoundationDB runs the database in a deterministic simulation of machines, networks, storage, and failures. Its engineering documentation describes combining simulation with live performance testing and hardware failure testing. This shows how powerful a deliberately constructed environment can become while retaining checks outside that environment. [FoundationDB, 2026][foundationdb]
 
@@ -202,7 +263,11 @@ A simulation and an implementation can also share a misunderstanding. Their agre
 
 ### The clay mold and the porcelain artifact
 
-> The simulation is the clay mold for the porcelain artifact.
+<br>
+<p align="center">
+  <em>“The simulation is the clay mold for the porcelain artifact.”</em>
+</p>
+<br>
 
 The simulation should show that each modeled journey produces the intended value within agreed constraints and resource budgets. That should be the standard for any implementation developed within it.
 
@@ -211,6 +276,12 @@ Before the software is trusted in the customer's environment, the mold must be d
 Google's canary-release practice provides a practical account of this transition. Some defects become visible only under real production traffic; limited deployments produce evidence before exposure expands. This is operational evidence about controlled introduction, rather than proof of customer value by itself. [Google SRE, 2018][canarying]
 
 The value claims should remain observable across that boundary. Differences discovered in actual work should then correct the model used for future changes and replacements.
+
+```mermaid
+flowchart LR
+    W["Observed work"] --> S["Simulation<br><i>the clay mold</i>"] --> A["Implementation<br>shaped within it"] --> C["Limited release<br>to real traffic"] --> P["Customer's actual<br>environment<br><i>the porcelain artifact</i>"]
+    P -. "differences correct<br>the model" .-> S
+```
 
 ## 8. Whither goest technical debt?
 
@@ -232,9 +303,20 @@ The future claim therefore needs its full economics. Rebuilding includes recover
 | Refactor | Repair reduces expected friction and risk enough to justify its cost. |
 | Replace | Rebuilding, validation, and transition together offer better value than continued repair or operation. |
 
+```mermaid
+flowchart LR
+    Q1{"Little expected<br>future burden?"} -- "yes" --> K["<b>Keep</b>"]
+    Q1 -- "no" --> Q2{"Repair<br>or rebuild?"}
+    Q2 -- "repair reduces friction<br>and risk enough" --> RF["<b>Refactor</b>"]
+    Q2 -- "rebuilding, validation and<br>transition offer better value" --> RP["<b>Replace</b>"]
+```
+
 In that future, the durable investment may increasingly be the domain understanding, design intent, constraints, data, external commitments, and trustworthy means of evaluating an implementation. Code can be regenerated. A missing understanding of the work can be regenerated into the next codebase as well.
 
-Maintainability still means easy change. Its expression may increasingly include the ability to regenerate, verify, and transition a solution within budget. This is a proposed consequence of cheaper complete replacement, rather than a result already established for software generally.
+Maintainability still means easy change. Its expression may increasingly include the ability to regenerate, verify, and transition a solution within budget.
+
+> [!IMPORTANT]
+> **Open proposition.** This is a proposed consequence of cheaper complete replacement, rather than a result already established for software generally.
 
 ## 9. Release at the pace the customer can land
 
@@ -246,7 +328,10 @@ This invites scrutiny of a familiar interpretation of *Accelerate*: high release
 
 DORA explicitly distinguishes continuous delivery—the ability to release on demand—from deploying every change immediately. It also warns that increasing deployment frequency without improving the underlying practices and architecture can increase failures and burnout. That supports building a responsive delivery capability while choosing the timing of customer-facing change deliberately. [DORA, continuous delivery][continuous-delivery]
 
-There is empirical support for the cost of disruption. In a laboratory study with 19 participants and a smartphone field study with 18, people became faster and more accurate as interface habits formed; disrupting the habits eliminated those measured gains. These were narrow interaction tasks, so they establish an adaptation cost rather than an optimal cadence for all products. [Garaialde and colleagues, 2020][interface-habits]
+There is empirical support for the cost of disruption. In a laboratory study with 19 participants and a smartphone field study with 18, people became faster and more accurate as interface habits formed; disrupting the habits eliminated those measured gains. [Garaialde and colleagues, 2020][interface-habits]
+
+> [!NOTE]
+> **Evidence boundary.** These were narrow interaction tasks, so they establish an adaptation cost rather than an optimal cadence for all products.
 
 Deployment, exposure to new behavior, and adoption into the customer's work can occur at different times. Feature flags are an established mechanism for separating deployment from feature release. [Hodgson, 2017][feature-toggles]
 
@@ -276,75 +361,99 @@ Research on entrepreneurial decisions supports explicit hypotheses and disciplin
 
 The next investment should answer a specific uncertainty within a defined budget. Sometimes there is a credible path to learning whether the solution can create value before there is a credible path to delivering the entire solution. That investigation needs its own intended result and resource limit.
 
-Taste supplies direction. Authority makes coherent action possible. Domain understanding grounds the dream in the work. Ownership carries the consequences. Humility allows the dream to be corrected.
+---
 
-Great software earns its place by the value customers can actually realize from it, for everything they must spend to make that value real.
+<p align="center">
+  <strong>Taste</strong> supplies direction.<br>
+  <strong>Authority</strong> makes coherent action possible.<br>
+  <strong>Domain understanding</strong> grounds the dream in the work.<br>
+  <strong>Ownership</strong> carries the consequences.<br>
+  <strong>Humility</strong> allows the dream to be corrected.
+</p>
+
+<p align="center">
+  <em>Great software earns its place by the value customers can actually realize from it,<br>
+  for everything they must spend to make that value real.</em>
+</p>
+
+---
 
 ## References and evidence notes
 
 The sources below distinguish empirical findings from engineering practice and proposed future capabilities. Observational associations are not treated as causal proof; vendor cases and preprints are identified explicitly. The claims about full engineering delegation, comprehensive customer-world simulation, and inexpensive complete regeneration remain propositions to evaluate as capabilities develop.
 
-1. Brynjolfsson, E., and Hitt, L. M. (2000). [Beyond Computation: Information Technology, Organizational Transformation and Business Performance][brynjolfsson-hitt]. *Journal of Economic Perspectives*, 14(4), 23–48. Research synthesis with firm-level evidence; emphasizes organizational complements and difficult-to-measure benefits.
+| Kind of source | Tags used below | Sources |
+| --- | --- | :-: |
+| Empirical research | `randomized trials` · `controlled study` · `meta-analysis` · `field study` · `survey research` · `benchmark` · `research synthesis` · `industry case` | 13 |
+| Methods, practice and guidance | `method` · `engineering practice` · `guidance` · `practitioner` · `research prototype` | 16 |
+| Read with extra caution | `vendor case` · `preprint` | 2 |
 
-2. Gasser, L. (1986). [The Integration of Computing and Routine Work][gasser]. *ACM Transactions on Information Systems*, 4(3), 205–225. Qualitative organizational field research; documents workarounds and compensating work.
+<details>
+<summary><strong>All 31 sources, tagged by kind of evidence</strong></summary>
 
-3. Brooks, F. P., and Woods, E. (2010). [Interview with Fred Brooks on the Publication of The Design of Design][brooks]. InformIT. Practitioner argument for conceptual integrity, an empowered chief designer, iterative discovery, and early investigation of actual use.
+1. `research synthesis` Brynjolfsson, E., and Hitt, L. M. (2000). [Beyond Computation: Information Technology, Organizational Transformation and Business Performance][brynjolfsson-hitt]. *Journal of Economic Perspectives*, 14(4), 23–48. Research synthesis with firm-level evidence; emphasizes organizational complements and difficult-to-measure benefits.
 
-4. Wang, D., Waldman, D. A., and Zhang, Z. (2014). [A Meta-Analysis of Shared Leadership and Team Effectiveness][shared-leadership]. *Journal of Applied Psychology*, 99(2), 181–198. Forty-two independent samples; positive associations concern broader leadership constructs and do not establish the best allocation of final design authority for a particular software team.
+2. `field study` Gasser, L. (1986). [The Integration of Computing and Routine Work][gasser]. *ACM Transactions on Information Systems*, 4(3), 205–225. Qualitative organizational field research; documents workarounds and compensating work.
 
-5. Moe, N. B., Šmite, D., Paasivaara, M., and Lassenius, C. (2021). [Finding the Sweet Spot for Organizational Control and Team Autonomy in Large-Scale Agile Software Development][moe]. *Empirical Software Engineering*, 26, 101. Two industrial cases at Ericsson; describes mechanisms and tensions rather than causal superiority.
+3. `practitioner` Brooks, F. P., and Woods, E. (2010). [Interview with Fred Brooks on the Publication of The Design of Design][brooks]. InformIT. Practitioner argument for conceptual integrity, an empowered chief designer, iterative discovery, and early investigation of actual use.
 
-6. Holtzblatt, K., and Beyer, H. (1996). [Contextual Design: Using Customer Work Models to Drive Systems Design][contextual-design]. CHI tutorial. A design methodology grounded in field observations and representations of work.
+4. `meta-analysis` Wang, D., Waldman, D. A., and Zhang, Z. (2014). [A Meta-Analysis of Shared Leadership and Team Effectiveness][shared-leadership]. *Journal of Applied Psychology*, 99(2), 181–198. Forty-two independent samples; positive associations concern broader leadership constructs and do not establish the best allocation of final design authority for a particular software team.
 
-7. Curtis, B., Krasner, H., and Iscoe, N. (1988). [A Field Study of the Software Design Process for Large Systems][curtis]. *Communications of the ACM*, 31(11), 1268–1287. Interviews concerning 17 large projects; historical qualitative evidence about domain knowledge, requirements, and communication.
+5. `field study` Moe, N. B., Šmite, D., Paasivaara, M., and Lassenius, C. (2021). [Finding the Sweet Spot for Organizational Control and Team Autonomy in Large-Scale Agile Software Development][moe]. *Empirical Software Engineering*, 26, 101. Two industrial cases at Ericsson; describes mechanisms and tensions rather than causal superiority.
 
-8. Google SRE (2018). [Example Error Budget Policy][error-budget]. *The Site Reliability Workbook*, Appendix B. A published operational policy illustrating how agreed reliability conditions affect releases.
+6. `method` Holtzblatt, K., and Beyer, H. (1996). [Contextual Design: Using Customer Work Models to Drive Systems Design][contextual-design]. CHI tutorial. A design methodology grounded in field observations and representations of work.
 
-9. NIST (2022). [Secure Software Development Framework, Version 1.1][ssdf]. SP 800-218. Engineering guidance on security requirements, verification, and vulnerability risk; not an empirical guarantee of security.
+7. `field study` Curtis, B., Krasner, H., and Iscoe, N. (1988). [A Field Study of the Software Design Process for Large Systems][curtis]. *Communications of the ACM*, 31(11), 1268–1287. Interviews concerning 17 large projects; historical qualitative evidence about domain knowledge, requirements, and communication.
 
-10. W3C WAI (updated 2024). [Involving Users in Evaluating Web Accessibility][wai]. Guidance on combining conformance evaluation with evaluation involving disabled users and on the limits of small samples.
+8. `engineering practice` Google SRE (2018). [Example Error Budget Policy][error-budget]. *The Site Reliability Workbook*, Appendix B. A published operational policy illustrating how agreed reliability conditions affect releases.
 
-11. Cui, Z., Demirer, M., Jaffe, S., Musolff, L., Peng, S., and Salz, T. (2025). [The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers][cui]. Randomized access to code-completion assistance across 4,867 developers; task completion is not a measure of complete product value.
+9. `guidance` NIST (2022). [Secure Software Development Framework, Version 1.1][ssdf]. SP 800-218. Engineering guidance on security requirements, verification, and vulnerability risk; not an empirical guarantee of security.
 
-12. Baolin, J., and Harvey, N. (2026). [Balancing AI Tensions: Moving from AI Adoption to Effective SDLC Use][dora-ai]. DORA. Includes qualitative analysis of 1,110 Google engineer responses and discussion of survey associations; does not identify a universal causal effect.
+10. `guidance` W3C WAI (updated 2024). [Involving Users in Evaluating Web Accessibility][wai]. Guidance on combining conformance evaluation with evaluation involving disabled users and on the limits of small samples.
 
-13. Conway, M. E. (1968). [How Do Committees Invent?][conway]. *Datamation*. Foundational organizational argument; applying it to agent workflows is an extension proposed in this paper.
+11. `randomized trials` Cui, Z., Demirer, M., Jaffe, S., Musolff, L., Peng, S., and Salz, T. (2025). [The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers][cui]. Randomized access to code-completion assistance across 4,867 developers; task completion is not a measure of complete product value.
 
-14. Boehm, B., Lane, J. A., Koolmanojwong, S., and Turner, R. (2014). [The Incremental Commitment Spiral Model: Principles and Practices for Successful Systems and Software][icsm]. Methodological framework, summarized by the Boehm Center for Systems and Software Engineering.
+12. `survey research` Baolin, J., and Harvey, N. (2026). [Balancing AI Tensions: Moving from AI Adoption to Effective SDLC Use][dora-ai]. DORA. Includes qualitative analysis of 1,110 Google engineer responses and discussion of survey associations; does not identify a universal causal effect.
 
-15. Bacchelli, A., and Bird, C. (2013). [Expectations, Outcomes, and Challenges of Modern Code Review][code-review]. ICSE. Industrial observations, interviews, surveys, and review-comment analysis at Microsoft.
+13. `practitioner` Conway, M. E. (1968). [How Do Committees Invent?][conway]. *Datamation*. Foundational organizational argument; applying it to agent workflows is an extension proposed in this paper.
 
-16. Jin, H., and Chen, H. (2026). [Are LLMs Reliable Code Reviewers? Systematic Overcorrection in Requirement Conformance Judgement][review-conformance]. *Automated Software Engineering*, 33, 90. Benchmark evaluation of five models; short programs and tested configurations limit generalization.
+14. `method` Boehm, B., Lane, J. A., Koolmanojwong, S., and Turner, R. (2014). [The Incremental Commitment Spiral Model: Principles and Practices for Successful Systems and Software][icsm]. Methodological framework, summarized by the Boehm Center for Systems and Software Engineering.
 
-17. Google SRE (2016). [Postmortem Culture: Learning from Failure][postmortems]. *Site Reliability Engineering*, Chapter 15. Practitioner account of investigation and follow-through after incidents.
+15. `field study` Bacchelli, A., and Bird, C. (2013). [Expectations, Outcomes, and Challenges of Modern Code Review][code-review]. ICSE. Industrial observations, interviews, surveys, and review-comment analysis at Microsoft.
 
-18. Kazman, R., Klein, M., and Clements, P. (2000). [ATAM: Method for Architecture Evaluation][atam]. CMU/SEI-2000-TR-004. Scenario-based architectural evaluation methodology developed and refined in practice.
+16. `benchmark` Jin, H., and Chen, H. (2026). [Are LLMs Reliable Code Reviewers? Systematic Overcorrection in Requirement Conformance Judgement][review-conformance]. *Automated Software Engineering*, 33, 90. Benchmark evaluation of five models; short programs and tested configurations limit generalization.
 
-19. FoundationDB project (documentation updated 2026). [Simulation and Testing][foundationdb]. Primary engineering documentation describing deterministic simulation alongside live performance and hardware failure testing.
+17. `engineering practice` Google SRE (2016). [Postmortem Culture: Learning from Failure][postmortems]. *Site Reliability Engineering*, Chapter 15. Practitioner account of investigation and follow-through after incidents.
 
-20. Lu, Y., and colleagues (2025). [UXAgent: An LLM-Agent-Based Usability Testing Framework for Web Design][uxagent]. Research framework supporting preparation for human usability studies; does not establish equivalence between simulated and actual users.
+18. `method` Kazman, R., Klein, M., and Clements, P. (2000). [ATAM: Method for Architecture Evaluation][atam]. CMU/SEI-2000-TR-004. Scenario-based architectural evaluation methodology developed and refined in practice.
 
-21. Google SRE (2018). [Canarying Releases][canarying]. *The Site Reliability Workbook*, Chapter 16. Engineering practice for evaluating limited production deployments and expanding exposure based on evidence.
+19. `engineering practice` FoundationDB project (documentation updated 2026). [Simulation and Testing][foundationdb]. Primary engineering documentation describing deterministic simulation alongside live performance and hardware failure testing.
 
-22. Fowler, M. (2019). [Technical Debt][technical-debt]. Practitioner explanation of future change effort, remediation cost, and the economics of internal quality.
+20. `research prototype` Lu, Y., and colleagues (2025). [UXAgent: An LLM-Agent-Based Usability Testing Framework for Web Design][uxagent]. Research framework supporting preparation for human usability studies; does not establish equivalence between simulated and actual users.
 
-23. Arisoy Cholkar, A. (2024). [Amazon Q Developer Just Reached a $260 Million Dollar Milestone][aws-migration]. AWS engineering blog. Company-reported Java migration case; savings are estimates, and the transformation is bounded.
+21. `engineering practice` Google SRE (2018). [Canarying Releases][canarying]. *The Site Reliability Workbook*, Chapter 16. Engineering practice for evaluating limited production deployments and expanding exposure based on evidence.
 
-24. Liu, Y., and colleagues (2026). [Debt Behind the AI Boom: A Large-Scale Empirical Study of AI-Generated Code in the Wild][ai-debt]. arXiv preprint, version 3. Static-analysis issue persistence is a proxy, not a direct measure of lifecycle costs.
+22. `practitioner` Fowler, M. (2019). [Technical Debt][technical-debt]. Practitioner explanation of future change effort, remediation cost, and the economics of internal quality.
 
-25. Forsgren, N. (2018). [The Data Behind DevOps: Becoming a High Performer][forsgren]. Author presentation explaining the research summarized in *Accelerate*. Distinguishes delivery speed from separately measured stability.
+23. `vendor case` Arisoy Cholkar, A. (2024). [Amazon Q Developer Just Reached a $260 Million Dollar Milestone][aws-migration]. AWS engineering blog. Company-reported Java migration case; savings are estimates, and the transformation is bounded.
 
-26. DORA (accessed 2026). [Capabilities: Continuous Delivery][continuous-delivery]. Research-informed practice guidance; distinguishes releasability on demand from immediate deployment of every change.
+24. `preprint` Liu, Y., and colleagues (2026). [Debt Behind the AI Boom: A Large-Scale Empirical Study of AI-Generated Code in the Wild][ai-debt]. arXiv preprint, version 3. Static-analysis issue persistence is a proxy, not a direct measure of lifecycle costs.
 
-27. Garaialde, D., and colleagues (2020). [Quantifying the Impact of Making and Breaking Interface Habits][interface-habits]. Controlled laboratory and smartphone field studies, with 19 and 18 participants respectively; narrow tasks limit conclusions about product-wide release cadence.
+25. `survey research` Forsgren, N. (2018). [The Data Behind DevOps: Becoming a High Performer][forsgren]. Author presentation explaining the research summarized in *Accelerate*. Distinguishes delivery speed from separately measured stability.
 
-28. Hodgson, P. (2017). [Feature Toggles (aka Feature Flags)][feature-toggles]. Practitioner guidance on separating deployment from feature exposure and managing the resulting complexity.
+26. `guidance` DORA (accessed 2026). [Capabilities: Continuous Delivery][continuous-delivery]. Research-informed practice guidance; distinguishes releasability on demand from immediate deployment of every change.
 
-29. Dmitriev, P., Gupta, S., Kim, D. W., and Vaz, G. (2017). [A Dirty Dozen: Twelve Common Metric Interpretation Pitfalls in Online Controlled Experiments][metric-pitfalls]. KDD. Cases from Microsoft experimentation illustrate why metric movements require interpretation.
+27. `controlled study` Garaialde, D., and colleagues (2020). [Quantifying the Impact of Making and Breaking Interface Habits][interface-habits]. Controlled laboratory and smartphone field studies, with 19 and 18 participants respectively; narrow tasks limit conclusions about product-wide release cadence.
 
-30. Kohavi, R., and colleagues (2009). [Online Experimentation at Microsoft][experimentation]. Primary account of controlled experiments used to evaluate ideas against actual customer behavior.
+28. `practitioner` Hodgson, P. (2017). [Feature Toggles (aka Feature Flags)][feature-toggles]. Practitioner guidance on separating deployment from feature exposure and managing the resulting complexity.
 
-31. Camuffo, A., Gambardella, A., Messinese, D., Novelli, E., Paolucci, E., and Spina, C. (2024). [A Scientific Approach to Entrepreneurial Decision-Making: Large-Scale Replication and Extension][camuffo]. *Strategic Management Journal*, 45(6), 1209–1237. Four randomized trials involving 759 firms; relevance to software decisions is an explicit inference.
+29. `industry case` Dmitriev, P., Gupta, S., Kim, D. W., and Vaz, G. (2017). [A Dirty Dozen: Twelve Common Metric Interpretation Pitfalls in Online Controlled Experiments][metric-pitfalls]. KDD. Cases from Microsoft experimentation illustrate why metric movements require interpretation.
+
+30. `engineering practice` Kohavi, R., and colleagues (2009). [Online Experimentation at Microsoft][experimentation]. Primary account of controlled experiments used to evaluate ideas against actual customer behavior.
+
+31. `randomized trials` Camuffo, A., Gambardella, A., Messinese, D., Novelli, E., Paolucci, E., and Spina, C. (2024). [A Scientific Approach to Entrepreneurial Decision-Making: Large-Scale Replication and Extension][camuffo]. *Strategic Management Journal*, 45(6), 1209–1237. Four randomized trials involving 759 firms; relevance to software decisions is an explicit inference.
+
+</details>
 
 [brynjolfsson-hitt]: https://www.aeaweb.org/articles?id=10.1257/jep.14.4.23
 [gasser]: https://doi.org/10.1145/214427.214429
