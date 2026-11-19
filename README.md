@@ -2,9 +2,6 @@
 
 *Taste, intent, domain understanding, and the discipline of creating net value*
 
-**A white paper developed from a conversation in 21 questions**  
-**Research checked: 18 November 2026**
-
 ## Abstract
 
 Great software is a net creator of value. It solves a real problem, fits the work of the people involved, uses their resources well, and remains reliable and easy to change as it evolves. Meeting the stated requirements is an inadequate definition of greatness, especially when requirements, in all their forms, are so often understated.
